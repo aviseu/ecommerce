@@ -14,6 +14,7 @@ use Illuminate\Notifications\Notifiable;
  * @property string         $last_name
  * @property string         $email
  * @property string         $password
+ * @property string         $type
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  */
@@ -32,6 +33,7 @@ class User extends Authenticatable
         'last_name',
         'email',
         'password',
+        'type',
     ];
 
     /**

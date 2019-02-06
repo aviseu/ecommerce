@@ -17,6 +17,16 @@ class UserSeeder extends Seeder
             'last_name'  => 'User',
             'email'      => 'admin@ecommerce.local',
             'password'   => bcrypt('123'),
+            'type'       => 'admin',
+        ]);
+
+        factory(\App\Models\User::class)->create([
+            'username'   => 'customer',
+            'first_name' => 'Customer',
+            'last_name'  => 'User',
+            'email'      => 'customer@ecommerce.local',
+            'password'   => bcrypt('123'),
+            'type'       => 'customer',
         ]);
     }
 }
