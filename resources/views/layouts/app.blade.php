@@ -34,7 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-
+                    @auth
+                        @if (Auth::user()->can('admin'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.product.list') }}">Products</a>
+                            </li>
+                        @endif
+                    @endauth
                 </ul>
 
                 <!-- Right Side Of Navbar -->

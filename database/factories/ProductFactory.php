@@ -16,7 +16,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Product::class, function (Faker $faker) {
     return [
         'name'   => $faker->colorName,
-        'price'  => $faker->numberBetween(100, 10000),
+        'price'  => $faker->numberBetween(100, 10000) / 100,
         'image'  => null,
         'status' => 'enabled',
     ];
