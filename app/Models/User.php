@@ -39,4 +39,12 @@ class User extends Authenticatable
     {
         return "{$this->first_name} {$this->last_name}";
     }
+
+    /**
+     * @return bool
+     */
+    public function hasUsername()
+    {
+        return $this->username != $this->email;
+    }
 }
